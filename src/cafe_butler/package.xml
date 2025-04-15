@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cafe_butler</name>
+  <version>0.0.1</version>
+  <description>Butler robot for French Door Cafe</description>
+  <maintainer email="developer@example.com">Robot Butler Developer</maintainer>
+  <license>Apache License 2.0</license>
+
+  <!-- Build tools -->
+  <buildtool_depend>ament_python</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Runtime/Exec dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <exec_depend>nav2_msgs</exec_depend>
+  <exec_depend>action_msgs</exec_depend>
+  <exec_depend>turtlebot3_gazebo</exec_depend>
+  <exec_depend>turtlebot3_description</exec_depend>
+  <exec_depend>turtlebot3_simulations</exec_depend>
+
+  <!-- For custom message generation -->
+  <build_depend>rosidl_default_generators</build_depend>
+  <build_export_depend>rosidl_default_generators</build_export_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+   <exec_depend>ros2launch</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+
