@@ -35,6 +35,7 @@ source ~/anu_ws/install/setup.bash
 ros2 run cafe_butler butler_client
 
 Client Commands
+
 •	1-7 → Run test scenarios
 
 •	c → Confirm action (at kitchen/table)
@@ -44,12 +45,12 @@ Client Commands
 •	q → Quit client
 
 Test Case Descriptions
-Test Case	Description
-1	Basic single table delivery
-2	Delivery with confirmation at kitchen & table
-3	Test timeouts for kitchen/table confirmations
-4	Cancel an order while traveling
-5	Deliver to multiple tables in sequence
-6	Multiple deliveries with timeouts at tables
-7	Multiple deliveries with mid-run cancellations
+
+1-	Basic single table delivery
+2-  Delivery with confirmation at kitchen & table
+3- 	Test timeouts for kitchen/table confirmations
+4-	Cancel an order while traveling
+5-	Deliver to multiple tables in sequence
+6-	Multiple deliveries with timeouts at tables
+7-	Multiple deliveries with mid-run cancellations
 
