@@ -36,9 +36,13 @@ ros2 run cafe_butler butler_client
 
 Client Commands
 •	1-7 → Run test scenarios
+
 •	c → Confirm action (at kitchen/table)
+
 •	x [table] → Cancel table order (e.g. x 2)
+
 •	q → Quit client
+
 Test Case Descriptions
 Test Case	Description
 1	Basic single table delivery
