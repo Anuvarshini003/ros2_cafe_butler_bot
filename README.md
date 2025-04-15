@@ -1,56 +1,118 @@
-Project Overview: 
-The Café Butler Robot is a simulated service robot built to autonomously deliver food from a kitchen to multiple tables inside a café environment. It’s powered by TurtleBot3 Burger, simulated in Gazebo, and navigated via Nav2 (Navigation2) in ROS 2 Humble.
-The robot follows user commands through a client interface, making it ideal for demonstrating state machine control, navigation, confirmations, cancellations, and timeouts within a dynamic simulation world.
+Perfect — thank you for clarifying. I’ll now distill your project documentation into a **concise, professional, no-fluff README.md** for your GitHub repo. I’ll reference your original doc content to ensure nothing important is missed, while keeping it clean, relevant, and properly structured for a typical ROS 2 project README.
 
+---
 
-Project Structure 
-![image](https://github.com/user-attachments/assets/d045cf9d-37aa-4884-a27a-008110c367bf)
+## 📑 Final Clean README.md  
 
-Installation and Setup
-1.	Create Workspace & Clone Packages
-mkdir -p ~/anu_ws/src
-cd ~/anu_ws/src
-Place your cafe_butler, turtlebot3, turtlebot3_msgs, and turtlebot3_simulations folders here.
-2.	Build the Workspace
+```markdown
+# ☕ ROS 2 Café Butler Robot (Humble)
+
+A ROS 2 Humble-based simulated service robot that autonomously delivers orders inside a virtual café environment using TurtleBot3, Nav2, and Gazebo.
+
+---
+
+## 📌 Project Overview
+
+The Café Butler Robot simulates a robot waiter tasked with navigating a café, picking up food from a kitchen, and delivering it to tables. It uses a **state machine** for task management and allows user interaction through a **command-line client**. The system handles delivery confirmations, cancellations, and timeout situations.
+
+---
+
+## 📦 Project Structure
+
+```
+anu_ws/
+├── src/
+│   ├── cafe_butler/
+│   │   ├── butler_server.py       # Robot state machine controller
+│   │   ├── butler_client.py       # Terminal-based client interface
+│   │   ├── worlds/
+│   │   │   └── cafe_world.world   # Custom Gazebo world
+│   ├── turtlebot3_simulations/
+│   ├── turtlebot3_navigation2/
+```
+
+---
+
+## ⚙️ System Components
+
+- **Nav2 Action Server (`/navigate_to_pose`)**: Handles robot path planning and navigation.
+- **ROS 2 Topics**
+  - `/butler/command` — orders from client  
+  - `/butler/status` — status updates from server  
+  - `/butler/confirm` — delivery confirmations  
+  - `/butler/cancel` — cancel delivery orders  
+
+---
+
+## 🛠️ Installation & Build
+
+```bash
+sudo apt update
+sudo apt install ros-humble-navigation2 ros-humble-turtlebot3* ros-humble-gazebo-ros-pkgs
 cd ~/anu_ws
 colcon build --packages-select cafe_butler
 source install/setup.bash
-3.	 Running the System
-•	Terminal 1: Launch Café Gazebo Simulation
-source ~/anu_ws/install/setup.bash
+```
+
+---
+
+## 🚀 Running the Simulation
+
+**Open 4 terminals**
+
+**Terminal 1**  
+```bash
 export TURTLEBOT3_MODEL=burger
-ros2 launch cafe_butler empty_world.launch.py
-In RViz, use 2D Pose Estimate to set robot’s initial pose at:
-x: 0.0
-y: -2.0
-•	Terminal 2: Launch Navigation
-source ~/anu_ws/install/setup.bash
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+```
+
+**Terminal 2**  
+```bash
 export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_navigation2 navigation2.launch.py
-•	Terminal 3: Start Butler Server
-source ~/anu_ws/install/setup.bash
+```
+
+**Terminal 3**  
+```bash
 ros2 run cafe_butler butler_server
-•	Terminal 4: Start Butler Client
-source ~/anu_ws/install/setup.bash
+```
+
+**Terminal 4**  
+```bash
 ros2 run cafe_butler butler_client
+```
 
-Client Commands
+**In RViz:** Use **2D Pose Estimate** to set the robot's initial pose to `(0.0, -2.0)`
 
-•	1-7 → Run test scenarios
+---
 
-•	c → Confirm action (at kitchen/table)
+## 🎮 Client Commands
 
-•	x [table] → Cancel table order (e.g. x 2)
+| Command | Description |
+|:-----------|:---------------------------|
+| `1-7`      | Run predefined test scenarios |
+| `c`        | Send confirmation |
+| `x [table]`| Cancel order for a specific table (e.g. `x 2`) |
+| `q`        | Quit the client |
 
-•	q → Quit client
+---
 
-Test Case Descriptions
+## 📊 Test Scenarios
 
-1-	Basic single table delivery
-2-  Delivery with confirmation at kitchen & table
-3- 	Test timeouts for kitchen/table confirmations
-4-	Cancel an order while traveling
-5-	Deliver to multiple tables in sequence
-6-	Multiple deliveries with timeouts at tables
-7-	Multiple deliveries with mid-run cancellations
+| Test Case | Description |
+|:-----------|:--------------------------------|
+| **1** | Single table delivery |
+| **2** | Delivery with confirmation |
+| **3** | Timeout handling for confirmations |
+| **4** | Cancel during delivery |
+| **5** | Multiple table deliveries |
+| **6** | Multiple deliveries with timeouts |
+| **7** | Multiple deliveries with mid-run cancellations |
 
+---
+
+## 📌 Conclusion
+
+The Café Butler Robot effectively demonstrates autonomous service robot behavior in a simulated café setting using ROS 2, TurtleBot3, and Nav2. It efficiently handles real-time task management, confirmations, cancellations, and timeouts within a dynamic ROS 2 multi-node framework.
+
+---
