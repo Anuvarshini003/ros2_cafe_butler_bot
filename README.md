@@ -8,10 +8,6 @@ The robot follows user commands through a client interface, making it ideal for 
 ![image](https://github.com/user-attachments/assets/e9a9be3b-7ef9-4fd2-aebb-512f490fa7b5)
 
 
-```
-
----
-
 ## ⚙️ System Components
 
 - **Nav2 Action Server (`/navigate_to_pose`)**: Handles robot path planning and navigation.
