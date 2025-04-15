@@ -1,34 +1,11 @@
-Perfect — thank you for clarifying. I’ll now distill your project documentation into a **concise, professional, no-fluff README.md** for your GitHub repo. I’ll reference your original doc content to ensure nothing important is missed, while keeping it clean, relevant, and properly structured for a typical ROS 2 project README.
+Project Overview 
+The Café Butler Robot is a simulated service robot built to autonomously deliver food from a kitchen to multiple tables inside a café environment. It’s powered by TurtleBot3 Burger, simulated in Gazebo, and navigated via Nav2 (Navigation2) in ROS 2 Humble.
+The robot follows user commands through a client interface, making it ideal for demonstrating state machine control, navigation, confirmations, cancellations, and timeouts within a dynamic simulation world.
 
----
+Project Structure 
+![image](https://github.com/user-attachments/assets/e9a9be3b-7ef9-4fd2-aebb-512f490fa7b5)
 
-## 📑 Final Clean README.md  
 
-```markdown
-# ☕ ROS 2 Café Butler Robot (Humble)
-
-A ROS 2 Humble-based simulated service robot that autonomously delivers orders inside a virtual café environment using TurtleBot3, Nav2, and Gazebo.
-
----
-
-## 📌 Project Overview
-
-The Café Butler Robot simulates a robot waiter tasked with navigating a café, picking up food from a kitchen, and delivering it to tables. It uses a **state machine** for task management and allows user interaction through a **command-line client**. The system handles delivery confirmations, cancellations, and timeout situations.
-
----
-
-## 📦 Project Structure
-
-```
-anu_ws/
-├── src/
-│   ├── cafe_butler/
-│   │   ├── butler_server.py       # Robot state machine controller
-│   │   ├── butler_client.py       # Terminal-based client interface
-│   │   ├── worlds/
-│   │   │   └── cafe_world.world   # Custom Gazebo world
-│   ├── turtlebot3_simulations/
-│   ├── turtlebot3_navigation2/
 ```
 
 ---
@@ -110,6 +87,16 @@ ros2 run cafe_butler butler_client
 | **7** | Multiple deliveries with mid-run cancellations |
 
 ---
+
+## Workflow
+![image](https://github.com/user-attachments/assets/a702b345-d164-4556-9644-d6a562f85aa5)
+
+## Output 
+![image](https://github.com/user-attachments/assets/f25e2fcd-8f12-4af5-b6e5-a1b880a0179c)
+![image](https://github.com/user-attachments/assets/1b66a7d8-28e8-4d5e-b68f-2ec8d3b6b8bf)
+![image](https://github.com/user-attachments/assets/e0ad8eaa-936e-4c08-b154-76e99b660955)
+![image](https://github.com/user-attachments/assets/4914b578-0c68-448d-8c16-a30d1d20e964)
+
 
 ## 📌 Conclusion
 
