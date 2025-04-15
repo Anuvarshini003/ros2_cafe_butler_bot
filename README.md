@@ -3,7 +3,8 @@
 The Café Butler Robot is a simulated service robot built to autonomously deliver food from a kitchen to multiple tables inside a café environment. It’s powered by TurtleBot3 Burger, simulated in Gazebo, and navigated via Nav2 (Navigation2) in ROS 2 Humble.
 The robot follows user commands through a client interface, making it ideal for demonstrating state machine control, navigation, confirmations, cancellations, and timeouts within a dynamic simulation world.
 
-Project Structure 
+## Project Structure 
+
 ![image](https://github.com/user-attachments/assets/e9a9be3b-7ef9-4fd2-aebb-512f490fa7b5)
 
 
