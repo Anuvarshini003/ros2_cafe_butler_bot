@@ -87,12 +87,17 @@ ros2 run cafe_butler butler_client
 ---
 
 ## Workflow
+
 ![image](https://github.com/user-attachments/assets/a702b345-d164-4556-9644-d6a562f85aa5)
 
 ## Output 
+
 ![image](https://github.com/user-attachments/assets/f25e2fcd-8f12-4af5-b6e5-a1b880a0179c)
+
 ![image](https://github.com/user-attachments/assets/1b66a7d8-28e8-4d5e-b68f-2ec8d3b6b8bf)
+
 ![image](https://github.com/user-attachments/assets/e0ad8eaa-936e-4c08-b154-76e99b660955)
+
 ![image](https://github.com/user-attachments/assets/4914b578-0c68-448d-8c16-a30d1d20e964)
 
 
